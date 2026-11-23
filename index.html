@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#bcddf5">
+<title>Стихи. Заметки. — Татьяна Гушель</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23bcddf5%22/%3E%3Ctext x=%228%22 y=%2212.5%22 font-size=%2212%22 text-anchor=%22middle%22 fill=%22%23902b4e%22 font-family=%22Georgia,serif%22 font-style=%22italic%22%3EС%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=dc411a7a">
+</head>
+<body>
+<div id="gate" class="gate" hidden>
+  <div class="gate-in">
+    <h1 class="gate-title"><i>Стихи.</i><br>Заметки.</h1>
+    <p class="gate-author">Татьяна Гушель</p>
+    <form id="gate-form" class="gate-form" autocomplete="off">
+      <p class="gate-text">Электронная версия книги для её читателей. Наведите камеру телефона на&nbsp;QR-код в&nbsp;книге или введите код доступа, напечатанный рядом с&nbsp;ним.</p>
+      <label class="gate-label" for="gate-code">Код доступа</label>
+      <input id="gate-code" class="gate-input" type="text" inputmode="text" autocapitalize="off" spellcheck="false" placeholder="xxxx-xxxx-xxxx" required>
+      <button class="gate-btn" type="submit">Открыть книгу</button>
+      <p id="gate-msg" class="gate-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+<div id="loading" class="loading" aria-live="polite">Открываем книгу…</div>
+<nav id="bar" class="bar" hidden>
+  <button id="toc-btn" class="toc-btn" type="button" aria-expanded="false" aria-controls="toc">Содержание</button>
+</nav>
+<aside id="toc" class="toc" hidden>
+  <div class="toc-head"><span>Содержание</span><button id="toc-close" class="toc-close" type="button" aria-label="Закрыть">×</button></div>
+  <ol id="toc-list" class="toc-list"></ol>
+</aside>
+<main id="book" class="book"></main>
+<script src="assets/app.js?v=dc411a7a" data-ver="dc411a7a"></script>
+</body>
+</html>
