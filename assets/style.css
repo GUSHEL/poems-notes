@@ -109,59 +109,11 @@ a.ico:focus-visible, a.fig:focus-visible { outline: 2px solid var(--berry); outl
 .even .folio .num, .even .folio .lbl { left: calc(3.3 * var(--u)); }
 .odd .folio .num, .odd .folio .lbl { left: calc(264.2 * var(--u)); }
 
-/* ------------------------------------------------------------ phones: reflow text */
+/* ------------------------------------------------------------ phones: the same page, full width */
 @media (max-width: 600px) {
   body { background: #dfe5ea; }
-  .book { padding: 0 0 56px; }
+  .book { padding: 0 0 72px; }
   .pg { width: 100%; margin: 0 0 8px; box-shadow: none; }
-  .pg.txt:not(.fixed) {
-    --f: clamp(1.5px, calc((100vw - 36px) / 232), 1.9px);
-    aspect-ratio: auto;
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 22px 18px 16px;
-    overflow: visible;
-  }
-  .pg.txt:not(.fixed) .body,
-  .pg.txt:not(.fixed) .foot,
-  .pg.txt:not(.fixed) .photo,
-  .pg.txt:not(.fixed) .folio,
-  .pg.txt:not(.fixed) .folio .num,
-  .pg.txt:not(.fixed) .folio .lbl {
-    position: static;
-    white-space: normal;
-  }
-  .pg.txt:not(.fixed) .ico,
-  .pg.txt:not(.fixed) .fig { position: relative; left: auto; top: auto; }
-  .pg.txt:not(.fixed) .ico {
-    order: -1;
-    width: calc(var(--w) * 1.15px);
-    height: calc(var(--h) * 1.15px);
-    margin: -6px 0 14px;
-  }
-  .pg.txt.even:not(.fixed) .ico { align-self: flex-start; margin-left: -6px; }
-  .pg.txt.odd:not(.fixed) .ico { align-self: flex-end; margin-right: -6px; }
-  .pg.txt:not(.fixed) .vs .l { padding-left: 1.3em; text-indent: -1.3em; }
-  .pg.txt:not(.fixed) .pr .l { display: inline; }
-  .pg.txt:not(.fixed) .gap { height: calc(min(var(--n), 3) * 13 * var(--f)); }
-  .pg.txt:not(.fixed) .foot { margin-top: 18px; color: #333; }
-  .pg.txt:not(.fixed) .photo { width: 100%; height: auto; margin-top: 18px; }
-  .pg.txt:not(.fixed) .fig { width: min(100%, calc(var(--w) * 1.25px)); height: auto; margin-top: 18px; align-self: center; }
-  .pg.txt:not(.fixed) .fig svg { height: auto; aspect-ratio: var(--w) / var(--h); }
-  .pg.txt:not(.fixed) .folio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 22px;
-    --u: 1.18px;
-  }
-  .pg.txt.even:not(.fixed) .folio { align-self: flex-start; }
-  .pg.txt.odd:not(.fixed) .folio { align-self: flex-end; }
-  .pg.txt:not(.fixed) .folio .num, .pg.txt:not(.fixed) .folio .lbl { width: auto; }
-  .pg.txt:not(.fixed) .folio .lbl { margin-top: 2px; }
-  .pg.txt:not(.fixed) .gap:first-child { display: none; }
-  .pg.fixed { --f: calc(var(--u) * 1.3); }
 }
 /* ------------------------------------------------------------ table of contents */
 .bar { position: fixed; top: 12px; right: 12px; z-index: 10; }
