@@ -19,7 +19,7 @@
 
   function normalize(code) {
     var c = String(code || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-    return c.length === 12 ? c.slice(0, 4) + '-' + c.slice(4, 8) + '-' + c.slice(8) : String(code || '').trim().toLowerCase();
+    return c.length === 12 ? c.slice(0, 4) + '-' + c.slice(4, 8) + '-' + c.slice(8) : String(code || '').trim().toLowerCase().replace(/^@/, '');
   }
 
   function fetchBin() {
